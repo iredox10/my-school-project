@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title><%= student.firstName %>  page </title>
+    <style>
+        .profile{
+            padding: 1rem;
+            background: green;
+            text-transform: capitalize;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    .profile a{
+        text-transform: capitalize;
+        background: white;
+        padding: .5rem;
+        text-decoration: none;
+        color: green;
+    }
+
+        .info{
+            margin: .5rem;
+        }
+        .detail-info{
+            text-transform: capitalize;
+            color: green;
+            margin: 1rem .5rem;
+            border-bottom: 2px solid green;
+            text-align: center;
+        }
+        fieldset{
+            padding: .5rem;
+            border-color: green;
+            margin: 1.5rem 0;
+        }
+        legend{
+            padding: .5rem;
+            text-transform: capitalize;
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: green;
+        }
+        p{
+            text-transform: capitalize;
+            margin: .5rem 0;
+            font-size: 1.5rem;
+        }
+        span{
+            margin-right: .5rem;
+            font-weight: bold;
+        }
+        .full-info{
+            margin: 1rem 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('./partial/nav.ejs') %> 
+    <div class="profile">
+        <h1><%= student.firstName %> <%= student.lastName %>  profile </h1>
+        <a href="/">log out</a>
+    </div>
+    <div class="info">
+    <p><span> first name:</span><%= student.firstName %>  </p>
+    <p><span> last name:</span><%= student.lastName %>  </p>
+    <p><span> email:</span><%= student.email %></p>
+    <p><span> selected program:</span><%= student.program %></p>
+        <a href="/complete-registration/<%= student.id %> ">complete registration</a>
+    </div>
+
+    <div class="detail-info">
+        <h1>student detail information</h1>
+    </div>
+    <div class="full-info">
+        <fieldset>
+            <legend>contact</legend>
+            <p><span>address:</span>
+                <%= student.address %>
+            </p>
+            <p><span>phone number:</span>
+                <%= student.phoneNumber %>
+            </p>
+            <p><span>date of birth:</span>
+                <%= student.dateOfBirth %>
+            </p>
+            <p><span>state of origin:</span>
+                <%= student.state %>
+            </p>
+            <p><span>nationality:</span>
+                <%= student.nationality %>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>school attended</legend>
+            <p><span>primarySchool:</span>
+                <%= student.primarySchool %>
+            </p>
+            <p><span>secondarySchool:</span>
+                <%= student.secondarySchool %>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>school attended</legend>
+            <p><span>waecNumber:</span>
+                <%= student.waecNumber %>
+            </p>
+            <p><span>necoNumber:</span>
+                <%= student.necoNumber %>
+            </p>
+            <p><span>jambNumber:</span>
+                <%= student.jambNumber %>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>next of kin:</legend>
+            <p><span>next of kin name:</span>
+                <%= student.kinName %>
+            </p>
+            <p><span>relationship:</span>
+                <%= student.relationship %>
+            </p>
+            <p><span>kin address:</span>
+                <%= student.kinAddress %>
+            </p>
+            <p><span>kin number:</span>
+                <%= student.kinNumber %>
+            </p>
+        </fieldset>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin btn($color){
+    padding: .5rem;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    border: 2px solid $color;
+    background: $color;
+    color: white;
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover {
+        background: white;
+        color: $color;
+    }
+}
+body{
+    font-family: sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0 2px 5px 1px rgb(0 0 0 / .1);
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+    .links{
+        a{
+            text-transform: capitalize;
+            text-decoration: none;
+            padding: 0 .2rem;
+            color: rgb(0, 128, 0);
+            transition: all .3s ease;
+            &:hover{
+                color: rgb(0, 128, 0, .5);
+            }
+        }
+    }
+}
+.main{
+    background: hsl(271, 76%, 53%, .5);
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    height: 100vh;
+    .side-bar{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+        a{
+            @include btn(rgb(0, 128, 0));
+            font-size: .8rem;
+        }
+    }
+    .start{
+        text-transform: capitalize;
+        margin: 1rem 0;
+        .btn{
+            margin: 2rem 0;
+            .register{
+                @include btn(red);
+            }
+            .log-in{
+                @include btn(green);
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .header{
+        .links{
+            a{
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .main{
+        display: flex;
+        height: 80vh;
+        gap: 1rem;
+        padding: 0;
+        p{
+            font-size: 1.2rem;
+        }
+        .side-bar{
+            display: flex;
+            flex-direction: column;
+            padding: .5rem;
+            height: 80%;
+            justify-content: space-between;
+            a{
+                font-size: 1.2rem;
+                text-align: center;
+            }
+        }
+        .start{
+            
+            padding: 5rem;
+            h1{
+                text-transform: uppercase;
+                font-size: 2rem;
+                margin: .5rem 0;
+                font-weight: 700;
+                // color: rgb(163, 255, 163);
+            }
+            p{
+                padding-right: 15rem;
+                font-size: 1.1rem;
+            }
+            button{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

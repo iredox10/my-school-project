@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/freshStudentReg.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="script.js" defer ></script>
+    <title>fresh-Registration</title>
+</head>
+<body>
+    <%- include('./partial/nav.ejs') %> 
+    
+    <form action="/register" method="POST">
+        <div class="head">
+            <h1>fresh student registration form</h1>
+            <p>filled this form to register to ivei</p>
+        </div>
+        <div class="name">
+            <div class="firstname">
+                <label for="firstname">first name</label>
+                <input type="text" id="firstname" name="firstName">
+                <span></span>
+            </div>
+            <div class="lastname">
+                <label for="lastname">last name</label>
+                <input type="text" id="lastname" name="lastName">
+                <span></span>
+            </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="otherName" class="form-label">other name</label>
+          <input type="text" name="otherName" id="otherName" class="form-control" placeholder="" aria-describedby="helpId">
+          <span></span>
+        </div>
+
+        <div class="email">
+            <label for="email">email</label>
+            <input type="email" id="email" name="email">
+            <span></span>
+        </div>
+
+        <div class="password">
+            <label for="password">select password</label>
+            <input type="password" id="password" name="password">
+            <span></span>
+        </div>
+
+        <label for="course">Select prefarred program</label>
+        <select id="course"  name="program">
+            <option  value="" selected disabled>select program</option>
+            <option  value="NID networking and system security">NID in Networking and system security</option>
+            <option  value="NID software engineering">NID in Computer Software Engineering Technology</option>
+            <option  value="NID hardware engineering">NID in Computer Hardware Engineering Technology</option>
+            <option  value="NID Telecommunication engineering">NID in Telecommunication Engineering Technology</option>
+            <option  value="NVC computer studies">NVC in computer studies</option>
+            <option  value="NVC fabrication and welding">NVC in fabrication and welding</option>
+            <option  value="NVC fashion design">NVC in fashion desing</option>
+            <option  value="NVC carpentary and joinery">NVC in carpentary and joinery</option>
+        </select>      
+
+
+        <button class="register">create account</button>
+        <p>Already have an Account <a href="/log">log in</a></p>
+    </form>
+</body>
+</html>

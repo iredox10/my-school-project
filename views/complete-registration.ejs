@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title>complete registration</title>
+    <style>
+      body{
+        box-sizing: border-box;
+      }
+         fieldset{
+            padding: 1rem;
+            border-color: green;
+            margin: 1.5rem 0;
+            width: 100%;
+        }
+        legend{
+            padding: .5rem;
+            text-transform: capitalize;
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: green;
+        }
+        label{
+          text-transform: capitalize;
+          font-size: 1.2rem;
+          margin-right: .5rem;
+        }
+        input{
+          width: 100%;
+          text-transform: capitalize;
+          /* padding: 1rem .5rem; */
+        }
+       
+    </style>
+</head>
+<body>
+    <%- include('./partial/nav.ejs') %> 
+    <h1>hello <%= student.firstName %> complete your registration</h1>
+    <form action="/complete-registration/<%= student.id %>?_method=PATCH" method="POST">
+        <fieldset class="contact">
+            <legend>Contact info</legend>
+            <div class="info">
+            <div class="info-1">
+            <div class="mb-3">
+              <label for="address" class="form-label">address</label>
+              <input type="text" name="address" id="address" class="form-control" placeholder="" aria-describedby="helpId" value="<%= student.address %> ">
+              <small id="helpId" class="text-muted"></small>
+            </div>
+            <div class="mb-3">
+              <label for="phoneNumber" class="form-label">phone number</label>
+              <input type="number" name="phoneNumber" id="phoneNumber" class="form-control" placeholder="" aria-describedby="helpId"  value="<%= student.phoneNumber %> ">
+              <small id="helpId" class="text-muted"></small>
+            </div>
+
+            <div class="mb-3">
+              <label for="dateOfBirth" class="form-label">date of birth</label>
+              <input type="date" name="dateOfBirth" id="dateOfBirth" class="form-control" placeholder="" aria-describedby="helpId"  value="<%= student.dateOfBirth %>">
+              <small id="helpId" class="text-muted"></small>
+            </div>
+    </div>
+            <div class="info-2">
+            <div class="mb-3">
+              <label for="state" class="form-label">state of origin</label>
+              <input type="text" name="state" id="state" class="form-control" placeholder="" aria-describedby="helpId" value="<%= student.state %>" >
+              <small id="helpId" class="text-muted"></small>
+            </div>
+
+            <div class="mb-3">
+              <label for="nationality" class="form-label">nationality</label>
+              <input type="text" name="nationality" id="nationality" class="form-control" placeholder="" aria-describedby="helpId" value="<%= student.nationality %>">
+              <small id="helpId" class="text-muted"></small>
+            </div>
+            </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>school attended</legend>
+                <div class="mb-3">
+                  <label for="primarySchool" class="form-label">primary school attended</label>
+                  <input type="text" name="primarySchool" id="primarySchool" class="form-control" placeholder="" aria-describedby="helpId" value="<%= student.primarySchool %>">
+                  <small id="helpId" class="text-muted"></small>
+                </div>
+
+                <div class="mb-3">
+                  <label for="secondarySchool" class="form-label">secondary school attended</label>
+                  <input type="text" name="secondarySchool" id="secondarySchool" class="form-control" placeholder="" aria-describedby="helpId" value="<%= student.secondarySchool %>">
+                  <small id="helpId" class="text-muted"></small>
+                </div>  
+        </fieldset>
+
+        <fieldset>
+            <legend>examination </legend>
+            <div class="mb-3">
+              <label for="jambNumber" class="form-label">jamb number</label>
+              <input type="text" name="jambNumber" id="jambNumber" class="form-control" placeholder="" aria-describedby="helpId" value="<%= student.jambNumber %>">
+              <small id="helpId" class="text-muted"></small>
+            </div>
+            <div class="mb-3">
+              <label for="waecNumber" class="form-label">waec number</label>
+              <input type="text" name="waecNumber" id="waecNumber" class="form-control" placeholder="" aria-describedby="helpId" value="<%= student.jambNumber %>">
+              <small id="helpId" class="text-muted"></small>
+            </div>
+
+            <div class="mb-3">
+              <label for="necoNumber" class="form-label">neco number</label>
+              <input type="text" name="necoNumber" id="necoNumber" class="form-control" placeholder="" aria-describedby="helpId" value="<%= student.necoNumber %>">
+              <small id="helpId" class="text-muted"></small>
+            </div>
+            
+        </fieldset>
+
+        <fieldset class="next-of-kin">
+            <legend>next of kin</legend>
+            <div class="mb-3">
+              <label for="kinName" class="form-label">name</label>
+              <input type="text" name="kinName" id="kinName" class="form-control" placeholder="" aria-describedby="helpId" value="<%= student.kinName %>">
+              <small id="helpId" class="text-muted"></small>
+              </div>
+              <div class="mb-3">
+                <label for="relationship" class="form-label">relationship</label>
+                <input type="text" name="relationship" id="relationship" class="form-control" placeholder="" aria-describedby="helpId" value="<%= student.relationship %>">
+                <small id="helpId" class="text-muted"></small>
+              </div>
+
+              <div class="mb-3">
+                <label for="kinAddress" class="form-label">address</label>
+                <input type="text" name="kinAddress" id="kinAddress" class="form-control" placeholder="" aria-describedby="helpId" value="<%= student.kinAddress %>">
+                <small id="helpId" class="text-muted"></small>
+              </div>
+
+              <div class="mb-3">
+                <label for="kinNumber" class="form-label">phone number</label>
+                <input type="number" name="kinNumber" id="kinNumber" class="form-control" placeholder="" aria-describedby="helpId" value="<%= student.phoneNumber %>">
+                <small id="helpId" class="text-muted"></small>
+              </div>
+
+        </fieldset>
+
+        <button>submit</button>
+    </form>
+</body>
+</html>

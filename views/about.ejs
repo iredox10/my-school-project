@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title>about us</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        h1,
+        p {
+            text-transform: capitalize
+        }
+
+        .members {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .card {
+            background: white;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+            padding: .5rem;
+        }
+        .supervisor{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('./partial/nav.ejs') %>
+        <div class="container">
+            <h1>about us</h1>
+            <p>this program is a result of our final year project</p>
+            <div class="detail">
+                <h2>project topic : IVEI ADDMISSION AND REGISTRATION </h2>
+            </div>
+            <div class="group_detail">
+                <h1>Group Members </h1>
+                <div class="members">
+                    <div class="card">
+                        <h3>Name: idris adam idris</h3>
+                        <p>Registration Number: NID/SET/18/033</p>
+                        <p>Email: Idreesadam200@gmail.com</p>
+                    </div>
+                    <div class="card">
+                        <h3>Name: idris adam idris</h3>
+                        <p>Registration Number: NID/SET/18/033</p>
+                        <p>Email: Idreesadam200@gmail.com</p>
+                    </div>
+                    <div class="card">
+                        <h3>Name: idris adam idris</h3>
+                        <p>Registration Number: NID/SET/18/033</p>
+                        <p>Email: Idreesadam200@gmail.com</p>
+                    </div>
+                    <div class="card">
+                        <h3>Name: idris adam idris</h3>
+                        <p>Registration Number: NID/SET/18/033</p>
+                        <p>Email: Idreesadam200@gmail.com</p>
+                    </div>
+                </div>
+                <div class="supervisor">
+                    <h1>Project Supervisor</h1>
+                    <div class="card">
+                        <h3>Name: malam shariff</h3>
+                        <p>Email: Idreesadam200@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+form .head {
+  text-align: center;
+  text-transform: capitalize;
+}
+form .name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+form div {
+  margin: 0.5rem 0;
+  position: relative;
+}
+form div label {
+  text-transform: capitalize;
+}
+form div input:not([type=file]) {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid;
+  outline: none;
+  font-size: 1.1rem;
+}
+form div input[type=file], form div select {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+form div span {
+  position: absolute;
+  width: 0%;
+  height: 5%;
+  background: orange;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s ease-in-out;
+}
+form div input:focus + span {
+  width: 100%;
+}
+form select {
+  padding: 0.5rem;
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+}
+form .register {
+  padding: 0.5rem;
+  margin: 1rem 0;
+  text-transform: capitalize;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: green;
+  border: none;
+}
+form .register:hover {
+  background: #7cc213;
+}
+
+/*# sourceMappingURL=freshStudentReg.css.map */

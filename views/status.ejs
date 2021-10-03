@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student page</title>
+</head>
+<body>
+    <%- include('./partial/nav.ejs') %> 
+    <div class="container">
+        <div class="name">
+            <p>first Name:<%= student.firstName %> </p>
+            <p>Last Name:<%= student.lastName %> </p>
+        </div>
+        <div class="contact">
+            <p>Jamb Number: <%= student.jambNumber %> </p>
+            <p>Email: <%= student.email %> </p>
+            <p>Birth Date: <%= student.birthDay %> </p>
+        </div>
+    </div>
+</body>
+</html>

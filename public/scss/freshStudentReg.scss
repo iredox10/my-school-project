@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form{
+    margin: 1rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    .head{
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .name{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    div{
+        margin: .5rem 0;
+        position: relative;
+        label{
+            text-transform: capitalize;
+        }
+        input:not([type= "file"]){
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid ;
+            outline: none;
+            font-size: 1.1rem;
+        }
+        input[type = "file"], select{
+            width: 100%;
+            margin: .5rem 0;
+        }
+        span{
+            position: absolute;
+            width: 0%;
+            height: 5%;
+            background: orange;
+            left: 0;
+            bottom: 0;
+            transition: all .5s ease-in-out;
+        }
+        input:focus + span{
+            width: 100%;
+        }
+    }
+    select{
+        padding: .5rem;
+        text-transform: capitalize;
+        margin-top: .5rem;
+    }
+    .register{
+        padding: .5rem;
+        margin: 1rem 0;
+        text-transform: capitalize;
+        color: white;
+        font-size: 1.2rem;
+        transition: all .3s ease;
+        cursor: pointer;
+        background: rgb(0, 128, 0);
+        border: none;
+        &:hover{
+            background: rgb(124, 194, 19);
+        }
+    }
+}

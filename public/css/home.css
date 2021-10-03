@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+.header .links a {
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 0 0.2rem;
+  color: green;
+  transition: all 0.3s ease;
+}
+.header .links a:hover {
+  color: rgba(0, 128, 0, 0.5);
+}
+
+.main {
+  background: rgba(138, 44, 226, 0.5);
+  color: white;
+  padding: 1rem;
+  height: 100vh;
+}
+.main .side-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.main .side-bar a {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  border: 2px solid green;
+  background: green;
+  color: white;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+}
+.main .side-bar a:hover {
+  background: white;
+  color: green;
+}
+.main .start {
+  text-transform: capitalize;
+  margin: 1rem 0;
+}
+.main .start .btn {
+  margin: 2rem 0;
+}
+.main .start .btn .register {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  border: 2px solid red;
+  background: red;
+  color: white;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.main .start .btn .register:hover {
+  background: white;
+  color: red;
+}
+.main .start .btn .log-in {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  border: 2px solid green;
+  background: green;
+  color: white;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+.main .start .btn .log-in:hover {
+  background: white;
+  color: green;
+}
+
+@media (min-width: 900px) {
+  .header .links a {
+    font-size: 1.2rem;
+  }
+
+  .main {
+    display: flex;
+    height: 80vh;
+    gap: 1rem;
+    padding: 0;
+  }
+  .main p {
+    font-size: 1.2rem;
+  }
+  .main .side-bar {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    height: 80%;
+    justify-content: space-between;
+  }
+  .main .side-bar a {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .main .start {
+    padding: 5rem;
+  }
+  .main .start h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    font-weight: 700;
+  }
+  .main .start p {
+    padding-right: 15rem;
+    font-size: 1.1rem;
+  }
+  .main .start button {
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

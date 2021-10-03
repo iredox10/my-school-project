@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title>blog</title>
+    <style>
+        body{
+            background: url(img/logo.jpeg);
+            background-repeat: no-repeat;
+            background-position: center ;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <%- include('./partial/nav.ejs') %> 
+    <main class="main">
+        <div class="side-bar">
+            <a href="/admissn-process"  class="addmission-and-registration-process">addmission and registration procedure</a>
+            <a href="/fresh-admissn"  class="fresh-addmission">fresh addmission process</a>
+            <a href="/"  class="registration-process">registration process</a>
+            <a href="/"  class="registration-requirement">addmission requirement</a>
+        </div>
+        <div class="start">
+            <h1>innovation and vocational enterprise institute</h1>
+            <p>welcome to kano state polytechnic, ivei faculty and software department. you can register and interact with our project
+            if you're not a member in this site. and this is our final year project.</p>
+            <div class="btn">
+            <a href="/register" class="register">register now</a>
+            <a href="/log" class="log-in">log in</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

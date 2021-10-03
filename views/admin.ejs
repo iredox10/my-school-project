@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title>admin page</title>
+    <style>
+        .container{
+            margin: 1rem 0;
+            text-transform: capitalize;
+            margin: 1rem .5rem;
+        }
+        table{
+            width: 100%;
+            margin: 1rem 0;
+        }
+        th,tbody,td{
+            border: 1px solid grey;
+            text-align: center;
+        }
+        .std-detail {
+            text-decoration: none;
+            /* background: rgb(175, 37, 37);
+            color: white; */
+            padding: .5rem;
+            display: flex;
+            flex-direction: column; 
+             align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+      <%- include('./partial/nav.ejs') %> 
+    <div class="container">
+        <h1>registered student</h1>
+        <% students.forEach(student => { %>
+            <table>
+                <thead>
+                <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>program selected</th>
+                <th>password</th>
+                <th>view/delete</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                    <td><%= student.firstName %> </td>
+                    <td><%= student.email %> </td>
+                    <td><%= student.program %> </td>
+                    <td> <%= student.password %>  </td>
+                    <td  class="std-detail">
+                        <a href="/profile/<%= student.id %> ">view student info</a>
+                        <form action="/profile/<%= student.id %>?_method=DELETE" method="POST">
+                            <button>delete user</button>
+                        </form>
+                    </td>
+                </tr>
+                    </tbody>
+
+            </table>
+      <%}) %> 
+    </div>
+</body>
+</html>

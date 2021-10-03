@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title>student</title>
+    <style>
+    .container{
+            padding: 1rem;
+            width: 800px;
+            margin: 0 auto;
+            text-transform:capitalize;
+        }
+    table{
+        border-spacing: 0;
+        width: 100%;
+    }
+        th,td{
+            border: 1px solid grey;
+            text-align: center;
+            vertical-align:center;
+            padding: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <%- include('./partial/nav.ejs') %> 
+    <div class="container">
+        <h1>registered student</h1>
+        <% students.forEach(student => { %>
+            <table>
+                <thead>
+                <tr>
+                <th>name</th>
+                <th>jamb number</th>
+                <th>birth date</th>
+                <th>email</th>
+                <th>password</th>
+                <th>admit/decline</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                    <form action="/students/<%= student.id %> " method="get">
+                    <tr>
+                    <td><%= student.firstName %> </td>
+                    <td><%= student.jambNumber %> </td>
+                    <td><%= student.birthDay %> </td>
+                    <td><%= student.email %> </td>
+                    <td> <%= student.password %>  </td>
+                    <td><button type="submit">admit</button></td>
+                </tr>
+            </form>
+                    </tbody>
+
+            </table>
+      <%}) %> 
+    </div>
+</body>
+</html
